@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Houses dashboard</title>
+  </head>
+  <style>
+    div {
+      text-align: center;
+    }
+    p {
+      margin: 0;
+    }
+    li:hover {
+      opacity: 0.6;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+      transition: 0.3s ease-in-out;
+    }
+
+    .card {
+      min-height: 100%;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <!-- Main cards -->
+    <div class="container main-card m-5 d-flex justify-content-center">
+      <div class="d-flex flex-column">
+        <div class="d-flex gap-3 mb-2">
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                Всего домов
+                <p class="text-center housesQuantity fw-bold"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                Общ. задолж.
+                <p class="text-center overallDebt fw-bold"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                Дома. задолж.
+                <p class="text-center housesDebt fw-bold"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100 d-flex gap-3">
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                Максим. сумма задолж.
+                <p class="text-center maxDebt fw-bold"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                Миним. сумма задолж.
+                <p class="text-center minDebt fw-bold"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                Сред. сумма задолж.
+                <p class="text-center averageDebt fw-bold"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar chart -->
+    <div class="m-5 shadow">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="chart-container">
+            <canvas
+              id="houseBarChart"
+              style="display: block; box-sizing: border-box; height: 220px; width: 1100px"
+              width="1375"
+              height="275"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie chart -->
+
+    <div class="container pie mb-5">
+      <div class="d-flex justify-content-center">
+        <div class="col-md-5">
+          <canvas
+            id="housePieChart"
+            style="display: block; box-sizing: border-box; height: 451px; width: 451px"
+            width="563"
+            height="563"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- The script -->
+    <script type="module" defer src="./scripts/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
