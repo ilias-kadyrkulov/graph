@@ -9,17 +9,37 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <title>Houses dashboard</title>
   </head>
   <style>
+    nav {
+      width: 65%;
+    }
+
     div {
       text-align: center;
     }
+
     p {
       margin: 0;
     }
-    li:hover {
-      opacity: 0.6;
+
+    a {
+      text-decoration: none;
+      color: rgb(33, 37, 41);
+      font-size: 1.2rem;
+      margin-right: 20px;
+    }
+
+    a:hover {
+      opacity: 60%;
+    }
+
+    .active {
+      color: red; /* Например, красный цвет текста */
+      font-weight: bold; /* Жирный шрифт */
+      /* Добавьте другие стили, если необходимо */
     }
 
     .card:hover {
@@ -38,6 +58,16 @@
     }
   </style>
   <body>
+    <nav class="d-flex justify-content-between pt-2">
+      <div>
+        <img class="" src="" alt="Logo" />
+      </div>
+      <div>
+        <a href="./index.html">Дома</a>
+        <a href="./invoice.html">Счета</a>
+        <a href="./meters.html">Счетчики</a>
+      </div>
+    </nav>
     <!-- Main cards -->
     <div class="container main-card m-5 d-flex justify-content-center">
       <div class="d-flex flex-column">
